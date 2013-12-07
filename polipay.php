@@ -107,14 +107,14 @@ class Polipay
 
         $data = array();
         foreach ($xml->xpath('//a:NavigateURL') as $value) {
-            $data['url'] = $value;
+            $data['url'] = (String)$value;
         }
         foreach ($xml->xpath('//a:TransactionToken') as $value) {
-            $data['token'] = $value;
+            $data['token'] = (String)$value;
         }
 
         foreach ($xml->xpath('//a:Message') as $value) {
-            $data['error'] = (String) $value;
+            $data['error'] = (String)$value;
         }
 
 
