@@ -17,7 +17,7 @@
 
     date_default_timezone_set('Asia/Manila');
 
-    $poli = new Polipay(true);
+    $poli = new Polipay();
     echo '<pre>';
     print_r($poli);
     echo '</pre>';
@@ -38,7 +38,7 @@ class Polipay
     private $timeOut = 1000;
     private $failUrl = 'http://webninjamobile.com/fail/';
 
-    public function __construct($debug)
+    public function __construct($debug = true)
     {
 
         $this->authCode = $debug ? '<DEBUG MERCHANT CODE>' : '<LIVE MERCHANT CODE>';
