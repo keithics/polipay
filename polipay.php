@@ -28,8 +28,8 @@
 class Polipay
 {
 
-    private $authCode;
-    private $mechantCode;
+    private $authCode = '<LIVE AUTH CODE>';
+    private $mechantCode = '<LIVE MERCHANT CODE>';
     private $currencyCode = 'AUD';
     private $checkourUrl = 'http://webninjamobile.com/checkout';
     private $homepage = 'http://webninjamobile.com';
@@ -37,13 +37,6 @@ class Polipay
     private $successUrl = 'http://webninjamobile.com/success';
     private $timeOut = 1000;
     private $failUrl = 'http://webninjamobile.com/fail/';
-
-    public function __construct($debug = true)
-    {
-
-        $this->authCode = $debug ? '<DEBUG MERCHANT CODE>' : '<LIVE MERCHANT CODE>';
-        $this->mechantCode = $debug ? '<DEBUG MERCHANT CODE>' : '<LIVE MERCHANT CODE>';
-    }
 
     function pay($amount)
     {
