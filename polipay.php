@@ -114,7 +114,7 @@ class Polipay
         }
 
         foreach ($xml->xpath('//a:Message') as $value) {
-            $data['error'] = $value;
+            $data['error'] = (String) $value;
         }
 
 
